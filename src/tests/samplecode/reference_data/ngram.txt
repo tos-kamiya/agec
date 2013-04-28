@@ -1,0 +1,96 @@
+# --ngram-size=6
+# --max-branch=-1
+# --max-call-depth=-1
+# --max-method-definition=-1
+
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,80	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,86	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,94	0
+java/util/Calendar.set:(III)V	ShowWeekdayR.main:([Ljava/lang/String;)V,97	0
+java/util/Calendar.get:(I)I	ShowWeekdayR.main:([Ljava/lang/String;)V,103	0
+java/io/PrintStream.printf:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;	ShowWeekdayR.main:([Ljava/lang/String;)V,126	0
+
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,15	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,38	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,61	0
+java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;	ShowWeekdayR.main:([Ljava/lang/String;)V,72	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,80	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,86	0
+
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,15	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,38	0
+java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,2	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,10	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,16	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,24	1
+
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,15	0
+java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,2	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,10	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,16	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,24	1
+java/util/Calendar.set:(III)V	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,27	1
+
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,38	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,61	0
+java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;	ShowWeekdayR.main:([Ljava/lang/String;)V,72	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,80	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,86	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,94	0
+
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,38	0
+java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,2	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,10	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,16	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,24	1
+java/util/Calendar.set:(III)V	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,27	1
+
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,61	0
+java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;	ShowWeekdayR.main:([Ljava/lang/String;)V,72	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,80	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,86	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,94	0
+java/util/Calendar.set:(III)V	ShowWeekdayR.main:([Ljava/lang/String;)V,97	0
+
+java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;	ShowWeekdayR.main:([Ljava/lang/String;)V,72	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,80	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,86	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,94	0
+java/util/Calendar.set:(III)V	ShowWeekdayR.main:([Ljava/lang/String;)V,97	0
+java/util/Calendar.get:(I)I	ShowWeekdayR.main:([Ljava/lang/String;)V,103	0
+
+java/util/Calendar.getInstance:()Ljava/util/Calendar;	ShowWeekdayR.main:([Ljava/lang/String;)V,0	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,15	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,38	0
+ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V	ShowWeekdayR.main:([Ljava/lang/String;)V,50	0
+java/util/Calendar.get:(I)I	ShowWeekdayR.main:([Ljava/lang/String;)V,103	0
+java/io/PrintStream.printf:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;	ShowWeekdayR.main:([Ljava/lang/String;)V,126	0
+
+java/util/Calendar.getInstance:()Ljava/util/Calendar;	ShowWeekdayR.main:([Ljava/lang/String;)V,0	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,15	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,38	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,61	0
+java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;	ShowWeekdayR.main:([Ljava/lang/String;)V,72	0
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,80	0
+
+java/util/Calendar.getInstance:()Ljava/util/Calendar;	ShowWeekdayR.main:([Ljava/lang/String;)V,0	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,15	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,38	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,61	0
+java/util/Calendar.get:(I)I	ShowWeekdayR.main:([Ljava/lang/String;)V,103	0
+java/io/PrintStream.printf:(Ljava/lang/String;[Ljava/lang/Object;)Ljava/io/PrintStream;	ShowWeekdayR.main:([Ljava/lang/String;)V,126	0
+
+java/util/Calendar.getInstance:()Ljava/util/Calendar;	ShowWeekdayR.main:([Ljava/lang/String;)V,0	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,15	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,38	0
+java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,2	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,10	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,16	1
+
+java/util/Calendar.getInstance:()Ljava/util/Calendar;	ShowWeekdayR.main:([Ljava/lang/String;)V,0	0
+java/lang/String.indexOf:(Ljava/lang/String;)I	ShowWeekdayR.main:([Ljava/lang/String;)V,15	0
+java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,2	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,10	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,16	1
+java/lang/Integer.parseInt:(Ljava/lang/String;)I	ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,24	1
+

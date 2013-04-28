@@ -1,0 +1,28 @@
+# --ngram-size=6
+# --max-branch=-1
+# --max-call-depth=-1
+# --max-method-definition=-1
+
+ope:
+  java/lang/String.indexOf:(Ljava/lang/String;)I
+  java/lang/String.indexOf:(Ljava/lang/String;)I
+  java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+  java/lang/Integer.parseInt:(Ljava/lang/String;)I
+  java/lang/Integer.parseInt:(Ljava/lang/String;)I
+  java/lang/Integer.parseInt:(Ljava/lang/String;)I
+loc:
+  ShowWeekdayR.main:([Ljava/lang/String;)V,15 >1
+  ShowWeekdayR.main:([Ljava/lang/String;)V,38 >0
+
+ope:
+  java/lang/String.indexOf:(Ljava/lang/String;)I
+  java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+  java/lang/Integer.parseInt:(Ljava/lang/String;)I
+  java/lang/Integer.parseInt:(Ljava/lang/String;)I
+  java/lang/Integer.parseInt:(Ljava/lang/String;)I
+  java/util/Calendar.set:(III)V
+loc:
+  ShowWeekdayR.main:([Ljava/lang/String;)V,15 >1
+  ShowWeekdayR.main:([Ljava/lang/String;)V,38 >1
+  ShowWeekdayR.main:([Ljava/lang/String;)V,61 >0
+
