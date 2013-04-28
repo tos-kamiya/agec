@@ -1,0 +1,20 @@
+language: python
+
+python:
+  - "2.7"
+  - "3.3"
+
+# command to install dependencies
+#install:
+# - "pip install . --use-mirrors"
+# - "pip install -r requirements.txt --use-mirrors"
+
+# command to run tests
+script:
+  - test src/tests/test_asm_manip.py
+  - test src/tests/test_clonefile_manip.py
+  - test src/tests/test_enum_generator.py
+  - test src/tests/test_ope_manip.py
+  - test src/tests/test_type_formatter.py
+  - test src/tests/test_w_samplecode.py
+
