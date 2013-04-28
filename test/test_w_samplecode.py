@@ -15,14 +15,17 @@ In some case of implementation change, these tests will fail.
 import unittest
 
 import os
+import os.path as p
 import subprocess
 #import sys
 #import tempfile
 
+#sys.path.insert(0, p.join(p.dirname(p.abspath(__file__)), '..', 'src'))
+
 J = os.path.join
 
-PROG_DIR = os.path.dirname(os.path.dirname(__file__))
-DATA_DIR = J(os.path.dirname(__file__), "samplecode")
+PROG_DIR = p.join(p.dirname(p.abspath(__file__)), '..', 'src')
+DATA_DIR = J(p.dirname(__file__), "samplecode")
 REF_DATA_DIR = J(DATA_DIR, "reference_data")
 
 def read_text(filepath):
