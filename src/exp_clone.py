@@ -122,7 +122,7 @@ def main(argv):
     psr = ArgumentParser(description="Expand clone's each location to a trace")
     psr.add_argument('asmdir', nargs=1)
     psr.add_argument('clonefile', nargs=1,
-            help='part of clone file, which includes options and a clone to be expanded. specify @ to read from stdin')
+            help="part of clone file, which includes options and a clone to be expanded. specify '-' to read from stdin")
     psr.add_argument('-t', '--loc-to-trace', action='store_true',
             help='expand each clone location to trace')
     psr.add_argument('-c', '--add-metric-clat', action='store_true',

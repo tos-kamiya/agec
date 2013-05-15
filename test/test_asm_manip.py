@@ -5,6 +5,7 @@ import unittest
 import os
 import sys
 
+import os.path as p
 sys.path.insert(0, p.join(p.dirname(p.abspath(__file__)), '..', 'src'))
 
 import asm_manip as am

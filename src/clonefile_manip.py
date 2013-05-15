@@ -215,7 +215,7 @@ def read_clone_file_iter(clonefile):
              a list of a tuple (metricname, metircvalue) when tag == METRIC_VALUES
     """
     
-    if clonefile != '@':
+    if clonefile != '-':
         def it():
             with open(clonefile, "rb") as f:
                 for L in f:

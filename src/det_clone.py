@@ -9,7 +9,7 @@ import sys
 from enum_generator import EnumGenerator
 
 def readline_iter(filename):
-    if filename != '@':
+    if filename != '-':
         with open(filename, "rb") as f:
             for L in f:
                 L = L.decode('utf-8').rstrip()
