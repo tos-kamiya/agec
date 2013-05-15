@@ -11,10 +11,11 @@ python:
 
 # command to run tests
 script:
-  - test src/tests/test_asm_manip.py
-  - test src/tests/test_clonefile_manip.py
-  - test src/tests/test_enum_generator.py
-  - test src/tests/test_ope_manip.py
-  - test src/tests/test_type_formatter.py
-  - test src/tests/test_w_samplecode.py
+  - test test/test_asm_manip.py
+  - test test/test_clonefile_manip.py
+  - test test/test_enum_generator.py
+  - test test/test_manip_funcs_w_samplecode.py
+  - test test/test_ope_manip.py
+  - test test/test_type_formatter.py
+  - test test/test_w_samplecode.py
 
