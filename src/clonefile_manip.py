@@ -8,6 +8,7 @@ __author__ = 'Toshihiro Kamiya <kamiya@mbj.nifty.com>'
 __status__ = 'experimental'
 
 import re
+import sys
 
 class CloneFileSyntaxError(ValueError):
     pass
@@ -213,9 +214,15 @@ def read_clone_file_iter(clonefile):
              a tuple (opeseq, traces) when tag == OPESEQ_TRACES
              a list of a tuple (metricname, metircvalue) when tag == METRIC_VALUES
     """
-    def it():
-        with open(clonefile, "rb") as f:
-            for L in f:
+    
+    if clonefile != '@':
+        def it():
+            with open(clonefile, "rb") as f:
+                for L in f:
+                    yield L.decode('utf-8').rstrip()
+    else:
+        def it():
+            for L in sys.stdin:
                 yield L.decode('utf-8').rstrip()
     for tag, value in read_clone_iter(it()):
         yield tag, value

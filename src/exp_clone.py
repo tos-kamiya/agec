@@ -122,7 +122,7 @@ def main(argv):
     psr = ArgumentParser(description="Expand clone's each location to a trace")
     psr.add_argument('asmdir', nargs=1)
     psr.add_argument('clonefile', nargs=1,
-            help='part of clone file, which includes options and a clone to be expanded')
+            help='part of clone file, which includes options and a clone to be expanded. specify @ to read from stdin')
     psr.add_argument('-t', '--loc-to-trace', action='store_true',
             help='expand each clone location to trace')
     psr.add_argument('-c', '--add-metric-clat', action='store_true',
@@ -141,10 +141,17 @@ def main(argv):
     if not (add_metric_clat or loc_to_trace):
         sys.exit("no action specfield. specify -t, -c, -d or mix of them")
 
-    for sec, data in cm.read_clone_file_iter(clonefile):
+    def itfunc():
+        for sec, data in cm.read_clone_file_iter(clonefile):
+            yield sec, data
+    clonefile_iter = itfunc()
+
+    for sec, data in clonefile_iter:
         if sec == cm.OPTIONS:
             clone_data_args = data
             break  # for sec
+        else:
+            sys.exit('clonefile missing option section')
 
     ngram_size = clone_data_args.ngram_size
     max_branch = clone_data_args.max_branch
@@ -188,7 +195,7 @@ def main(argv):
     sys.stdout.write('\n')  # separator
 
     try:
-        for sec, data in cm.read_clone_file_iter(clonefile):
+        for sec, data in clonefile_iter:
             if sec == cm.OPESEQ_LOCS:
                 opeseq, locs = data
             elif sec == cm.OPESEQ_TRACES:

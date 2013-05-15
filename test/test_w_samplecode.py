@@ -14,15 +14,12 @@ In some case of implementation change, these tests will fail.
 
 import unittest
 
-import os
 import os.path as p
 import subprocess
-#import sys
-#import tempfile
 
 #sys.path.insert(0, p.join(p.dirname(p.abspath(__file__)), '..', 'src'))
 
-J = os.path.join
+J = p.join
 
 PROG_DIR = p.join(p.dirname(p.abspath(__file__)), '..', 'src')
 DATA_DIR = J(p.dirname(__file__), "samplecode")
@@ -82,7 +79,17 @@ class TestWithSampleCode(unittest.TestCase):
         ref_text = read_text(J(REF_DATA_DIR, "clone-cdt-index.txt"))
         ref_text_blocks = sorted(map(tuple, split_by_empty_line(ref_text.split('\n'))))
         self.assertSequenceEqual(text_blocks, ref_text_blocks)
-        
+    
+    def testDoDetectionWithPipe(self):
+        p1 = ' '.join(["python", J(PROG_DIR, "gen_ngram.py"), "-n", "6", DATA_DIR])
+        p2 = ' '.join(["python", J(PROG_DIR, "det_clone.py"), '@'])
+        p3 = ' '.join(["python", J(PROG_DIR, "tosl_clone.py"), DATA_DIR, '@'])
+        text = subprocess.check_output(' | '.join([p1, p2, p3]), shell=True).decode('utf-8')
+        text_blocks = sorted(map(tuple, split_by_empty_line(text.split('\n'))))
+        ref_text = read_text(J(REF_DATA_DIR, "clone-linenum.txt"))
+        ref_text_blocks = sorted(map(tuple, split_by_empty_line(ref_text.split('\n'))))
+        self.assertSequenceEqual(text_blocks, ref_text_blocks)
+
 if __name__ == "__main__":
     #import sys;sys.argv = ['', 'Test.testName']
     unittest.main()
