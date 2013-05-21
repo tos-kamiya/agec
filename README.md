@@ -13,6 +13,8 @@ Usage
 
 TODO
 
+(The paper bellow includes a simple, command-line usage of the tool.)
+
 Publish
 =======
 
