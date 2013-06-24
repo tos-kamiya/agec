@@ -13,10 +13,12 @@ Usage
 
 TODO
 
+(The paper bellow includes a simple, command-line usage of the tool.)
+
 Publish
 =======
 
-* Toshihiro Kamiya, "Agec: An Execution-Semantic Clone Detection Tool," IEEE ICPC 2013 Tool-Demo Track (to appear). 
+* Toshihiro Kamiya, "Agec: An Execution-Semantic Clone Detection Tool," Proc. IEEE ICPC 2013, pp. 227-229 [link to the paper](http://toshihirokamiya.com/docs/p227-kamiya.pdf).
 
 License
 =======
