@@ -302,8 +302,9 @@ def remove_too_many_definition_methods(method2claz2code, max_method_definition):
         del method2claz2code[m]
     return too_many_definition_methods
 
-def main(argv):
+def gen_argpsr():
     from argparse import ArgumentParser
+    from _version_data import VERSION
     psr = ArgumentParser(description='Generate n-grams of method calls')
     psr.add_argument('asmdir', nargs=1)
 
@@ -328,7 +329,11 @@ def main(argv):
     psr.add_argument('--mode-method-body', action='store_true',
             help='show method bodies (byte code)')
 
-    psr.add_argument('--version', action='version', version='%(prog)s 1.0')
+    psr.add_argument('--version', action='version', version='%(prog)s ' + VERSION)
+    return psr
+
+def main(argv):
+    psr = gen_argpsr()
     args = psr.parse_args(argv[1:])
 
     if sum(filter(None, [args.mode_method_signature, args.mode_method_body, 

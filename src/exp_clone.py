@@ -117,8 +117,9 @@ def extract_max_depth(ngrams):
     max_depth = max(depth for ngram in ngrams for _, _, depth in ngram)
     return max_depth
 
-def main(argv):
+def gen_argpsr():
     from argparse import ArgumentParser
+    from _version_data import VERSION
     psr = ArgumentParser(description="Expand clone's each location to a trace")
     psr.add_argument('asmdir', nargs=1)
     psr.add_argument('clonefile', nargs=1,
@@ -129,7 +130,11 @@ def main(argv):
             help='add common-location-among-traces metric to each clone')
     psr.add_argument('-d', '--add-metric-max-depth', action='store_true',
             help='add max-depth metric to each clone')
-    psr.add_argument('--version', action='version', version='%(prog)s 1.0')
+    psr.add_argument('--version', action='version', version='%(prog)s ' + VERSION)
+    return psr
+
+def main(argv):
+    psr = gen_argpsr()
     args = psr.parse_args(argv[1:])
 
     asmdir = args.asmdir[0]

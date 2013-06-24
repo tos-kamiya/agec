@@ -37,15 +37,20 @@ def read_ngram_iter(ngram_file):
             cur_locs.append(loc)
             cur_deps.append(int(dep))
 
-def main(argv):
+def gen_argpsr():
     from argparse import ArgumentParser
+    from _version_data import VERSION
     psr = ArgumentParser(description='Generate n-grams of method calls')
     psr.add_argument('ngramfile', nargs=1,
             help='input n-gram file. specify @ to read from stdin')
     psr.add_argument('-x', '--all-ope-seq-per-loc-set', action='store_true',
             help='show all ope sequences for a clone (a set of locations)')
     psr.add_argument('--diagnostic', action='store_true') 
-    psr.add_argument('--version', action='version', version='%(prog)s 1.0')
+    psr.add_argument('--version', action='version', version='%(prog)s ' + VERSION)
+    return psr
+
+def main(argv):
+    psr = gen_argpsr()
     args = psr.parse_args(argv[1:])
 
     ngram_file = args.ngramfile[0]
