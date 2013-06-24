@@ -16,7 +16,7 @@ public class ShowWeekdayR {
 			else if (args[0].indexOf("/") >= 0)
 				setCalendarDate(cal, args[0], "/");
 			else if (args[0].indexOf(".") >= 0) {
-				String[] fs = args[0].split(".");
+				String[] fs = args[0].split("[.]");
 				cal.set(parseInt(fs[0]), parseInt(fs[1]) - 1, parseInt(fs[2]));
 			}
 		}
