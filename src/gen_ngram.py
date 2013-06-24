@@ -322,11 +322,12 @@ def gen_argpsr():
     psr.add_argument('--include-ctors', action='store_true',
             help='include "<init>" and access$... methods as targets')
 
-    psr.add_argument('--mode-diagnostic', action='store_true',
+    grp = psr.add_mutually_exclusive_group(required=False)
+    grp.add_argument('--mode-diagnostic', action='store_true',
             help='show bytecode info and the filtering results')
-    psr.add_argument('--mode-method-signature', action='store_true',
+    grp.add_argument('--mode-method-signature', action='store_true',
             help='show method signatures')
-    psr.add_argument('--mode-method-body', action='store_true',
+    grp.add_argument('--mode-method-body', action='store_true',
             help='show method bodies (byte code)')
 
     psr.add_argument('--version', action='version', version='%(prog)s ' + VERSION)
@@ -336,9 +337,6 @@ def main(argv):
     psr = gen_argpsr()
     args = psr.parse_args(argv[1:])
 
-    if sum(filter(None, [args.mode_method_signature, args.mode_method_body, 
-            args.mode_diagnostic])) >= 2:
-        sys.exit("--mode-* options are mutually exclusive")
     asmdir = args.asmdir[0]
     mode_method_signature = args.mode_method_signature
     mode_method_body = args.mode_method_body
