@@ -21,7 +21,7 @@ Agec also includes the following utilities:
 
 **exp_clone.py**. Calculates some metrics from each code clone.
 
-**run_disasy.py**. Disassembles a jar file (with 'javap' disassembler) and generate disassemble-result files.
+**run_disasm.py**. Disassembles a jar file (with 'javap' disassembler) and generate disassemble-result files.
 
 ### gen_ngram.py
 
