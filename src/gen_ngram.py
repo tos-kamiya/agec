@@ -82,7 +82,8 @@ def gen_code_ngrams(claz, method, method2claz2code, ngram_size, max_call_depth=-
         max_call_depth = ngram_size
 
     def to_ngram_tuple(q):
-        return tuple((invoked_sig, "%s,%d" % (pos_sig, pos_index), depth) for invoked_sig, pos_sig, pos_index, depth in q)
+        return tuple((invoked_sig, "%s,%d" % (pos_sig, pos_index), depth) \
+                for invoked_sig, pos_sig, pos_index, depth in q)
 
     ngram_set = set()
     cur_gram = []
@@ -165,6 +166,8 @@ def gen_code_ngrams(claz, method, method2claz2code, ngram_size, max_call_depth=-
                     if c in UNTRACKED_CLAZS:
                         index += 1
                         continue  # while index
+                    if opecode in ("invokevirtual", "invokeinterface"):  # dynamic dispatch
+                        c = None
 
                     assert m
                     if depth < max_call_depth and cur_gram:  
