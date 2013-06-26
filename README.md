@@ -28,9 +28,9 @@ Agec also includes the following utilities:
 gen_ngram.py reads given (disassembled) Java byte-code files, 
 generates n-grams of method invocations from them and outputs n-grams to the standard output.
 
-usage: gen_ngram.py asmdir -n size
+usage: gen_ngram.py -a asm_directory -n size > ngram
 
-Here, 'asmdir' is a directory which contains the disassemble result files (*.asm).
+Here, 'asm_directory' is a directory which contains the disassemble result files (*.asm).
 'size' is a length of each n-gram (default value is 6).
 
 Note that a disassemble file need to be generated from *.class file with a command
@@ -41,9 +41,9 @@ Note that a disassemble file need to be generated from *.class file with a comma
 det_clone.py reads a n-gram file, identifies the same n-grams, 
 and outputs them as code clones to the standard output.
 
-usage: det_clone.py ngramfile
+usage: det_clone.py ngram_file > clone_index
 
-Here, 'ngramfile' is a n-gram file, which has been generated with gen_ngram.py.
+Here, 'ngram_file' is a n-gram file, which has been generated with gen_ngram.py.
 
 Each location in the result is shown in byte-code index.
 In order to convert locations to line numbers of source files, use tosl_clone.py.
@@ -52,12 +52,12 @@ In order to convert locations to line numbers of source files, use tosl_clone.py
 
 tosl_clone.py reads Java byte-code files and a code-clone detection result, 
 converts each location of code clone into line number, 
-and ouptuts the converted code-clone data to the standard output.
+and outputs the converted code-clone data to the standard output.
 
-usage: tosl_clone.py asmdir cloneindex
+usage: tosl_clone.py -a asm_directory clone_index > clone-linenum
 
-Here, 'asmdir' is a directory containing disassembled result files and
-'cloneindex' is the code-clone detection result that has been generated with
+Here, 'asm_directory' is a directory containing disassembled result files and
+'clone_index' is the code-clone detection result that has been generated with
 det_clone.py.
 
 ## A Small Example
@@ -67,9 +67,9 @@ This sample is to detect code clones from a Java file: ShowWeekday.java.
 ```bash
 $ javac ShowWeekday.java
 $ javap -c -p -l -constants ShowWeekday > disasm/ShowWeekday.asm
-$ gen_ngram.py disasm > ngrams.txt
+$ gen_ngram.py -a disasm > ngrams.txt
 $ det_clone.py ngrams.txt > clone-indices.txt
-$ tosl_clone.py clone-indices.txt > clone-linenums.txt
+$ tosl_clone.py -a disasm clone-indices.txt > clone-linenums.txt
 ```
 
 ## Publish
@@ -79,6 +79,3 @@ $ tosl_clone.py clone-indices.txt > clone-linenums.txt
 ## License
 
 Agec is distributed under [MIT License](http://opensource.org/licenses/mit-license.php).
-
-
-
