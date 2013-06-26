@@ -4,9 +4,9 @@
 # --max-method-definition=-1
 
 ope:
-  java/lang/String.indexOf:(Ljava/lang/String;)I
-  java/lang/String.indexOf:(Ljava/lang/String;)I
-  java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+  indexOf:(Ljava/lang/String;)I
+  indexOf:(Ljava/lang/String;)I
+  split:(Ljava/lang/String;)[Ljava/lang/String;
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
@@ -15,12 +15,12 @@ loc:
   ShowWeekdayR.java: 16 >0 // main:([Ljava/lang/String;)V
 
 ope:
-  java/lang/String.indexOf:(Ljava/lang/String;)I
-  java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+  indexOf:(Ljava/lang/String;)I
+  split:(Ljava/lang/String;)[Ljava/lang/String;
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
-  java/util/Calendar.set:(III)V
+  set:(III)V
 loc:
   ShowWeekdayR.java: 14 >1 // main:([Ljava/lang/String;)V
   ShowWeekdayR.java: 16 >1 // main:([Ljava/lang/String;)V

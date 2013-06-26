@@ -41,7 +41,7 @@ def gen_argpsr():
     from argparse import ArgumentParser
     from _version_data import VERSION
     psr = ArgumentParser(description='Generate n-grams of method calls')
-    psr.add_argument('ngramfile', nargs=1,
+    psr.add_argument('ngram_file',
             help="input n-gram file. specify '-' to read from stdin")
     psr.add_argument('-x', '--all-ope-seq-per-loc-set', action='store_true',
             help='show all ope sequences for a clone (a set of locations)')
@@ -53,7 +53,7 @@ def main(argv):
     psr = gen_argpsr()
     args = psr.parse_args(argv[1:])
 
-    ngram_file = args.ngramfile[0]
+    ngram_file = args.ngram_file
     all_ope_seq = args.all_ope_seq_per_loc_set
     diagnostic = args.diagnostic
 

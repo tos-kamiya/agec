@@ -309,7 +309,7 @@ def gen_argpsr():
     from argparse import ArgumentParser
     from _version_data import VERSION
     psr = ArgumentParser(description='Generate n-grams of method calls')
-    psr.add_argument('asmdir', nargs=1)
+    psr.add_argument('-a', '--asm-directory', action='store')
 
     psr.add_argument('-n', '--ngram-size', action='store', type=int, default=6)
     psr.add_argument('-v', '--verbose', action='store_true')
@@ -340,7 +340,7 @@ def main(argv):
     psr = gen_argpsr()
     args = psr.parse_args(argv[1:])
 
-    asmdir = args.asmdir[0]
+    asmdir = args.asm_directory
     mode_method_signature = args.mode_method_signature
     mode_method_body = args.mode_method_body
     verbose = args.verbose

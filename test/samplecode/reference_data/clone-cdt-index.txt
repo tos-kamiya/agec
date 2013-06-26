@@ -6,9 +6,9 @@
 metric-clat= 1
 metric-max-depth= 1
 ope:
-  java/lang/String.indexOf:(Ljava/lang/String;)I
-  java/lang/String.indexOf:(Ljava/lang/String;)I
-  java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+  indexOf:(Ljava/lang/String;)I
+  indexOf:(Ljava/lang/String;)I
+  split:(Ljava/lang/String;)[Ljava/lang/String;
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
@@ -30,12 +30,12 @@ trace:
 metric-clat= 0
 metric-max-depth= 1
 ope:
-  java/lang/String.indexOf:(Ljava/lang/String;)I
-  java/lang/String.split:(Ljava/lang/String;)[Ljava/lang/String;
+  indexOf:(Ljava/lang/String;)I
+  split:(Ljava/lang/String;)[Ljava/lang/String;
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
   java/lang/Integer.parseInt:(Ljava/lang/String;)I
-  java/util/Calendar.set:(III)V
+  set:(III)V
 trace:
   ShowWeekdayR.main:([Ljava/lang/String;)V,15 >0
   ShowWeekdayR.setCalendarDate:(Ljava/util/Calendar;Ljava/lang/String;Ljava/lang/String;)V,2 >1

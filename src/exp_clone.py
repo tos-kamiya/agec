@@ -121,9 +121,9 @@ def gen_argpsr():
     from argparse import ArgumentParser
     from _version_data import VERSION
     psr = ArgumentParser(description="Expand clone's each location to a trace")
-    psr.add_argument('asmdir', nargs=1)
-    psr.add_argument('clonefile', nargs=1,
-            help="part of clone file, which includes options and a clone to be expanded. specify '-' to read from stdin")
+    psr.add_argument('-a', '--asm-directory', action='store')
+    psr.add_argument('clone_file', action='store',
+            help="part of clone-index or clone-linenum file, which includes options and a clone to be expanded. specify '-' to read from stdin")
     psr.add_argument('-t', '--loc-to-trace', action='store_true',
             help='expand each clone location to trace')
     psr.add_argument('-c', '--add-metric-clat', action='store_true',
@@ -137,8 +137,8 @@ def main(argv):
     psr = gen_argpsr()
     args = psr.parse_args(argv[1:])
 
-    asmdir = args.asmdir[0]
-    clonefile = args.clonefile[0]
+    asmdir = args.asm_directory
+    clonefile = args.clone_file
     add_metric_clat = args.add_metric_clat
     add_metric_max_depth = args.add_metric_max_depth
     loc_to_trace = args.loc_to_trace
