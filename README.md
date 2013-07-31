@@ -1,5 +1,7 @@
 [![Build Status](https://secure.travis-ci.org/tos-kamiya/agec.png?branch=master)](http://travis-ci.org/tos-kamiya/agec)
 
+**This project has moved to a new repo -> https://github.com/tos-kamiya/agec2 .**
+
 # agec
 
 Agec, an arbitrary-granularity execution clone detection tool
